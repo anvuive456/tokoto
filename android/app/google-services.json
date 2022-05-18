@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "853866447195",
+    "project_id": "tokoto-ae502",
+    "storage_bucket": "tokoto-ae502.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853866447195:android:8de4876d31ef0e8031da7e",
+        "android_client_info": {
+          "package_name": "com.example.shop_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "853866447195-5pe9c1ifuksl9lcoqhs18ck5plonojvg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shop_app",
+            "certificate_hash": "b31336d539e6fb3152b846371487e1874a3f4ab0"
+          }
+        },
+        {
+          "client_id": "853866447195-i0hoomaon9vph02p5lpeu61nahnbm155.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlFMk8apHmtzg-Od3r438EIFNVXbWKD2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "853866447195-i0hoomaon9vph02p5lpeu61nahnbm155.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
