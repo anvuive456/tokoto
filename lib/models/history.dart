@@ -6,6 +6,8 @@ class History {
   DateTime purchasedTime = DateTime.now();
   String phoneNum = '';
   String address = '';
+  String id='';
+  bool status= false;
   List<Cart> carts = [];
 
   History();
@@ -21,6 +23,18 @@ class History {
     contents.forEach((element) {
       this.carts.add(Cart.fromJson(element));
     });
+    this.status = obj['status'];
+    this.id = obj['id'];
   }
-
+  Map<String,dynamic> toJson(){
+    return {
+      'phoneNumber':this.phoneNum,
+      'address':this.address,
+      'receiveDate':this.receiveTime,
+      'purchasedDate':this.purchasedTime,
+      'carts':this.carts.map((e) => e.toJson()),
+      'status':this.status,
+      'id':this.id,
+    };
+  }
 }

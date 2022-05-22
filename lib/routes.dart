@@ -1,4 +1,12 @@
 import 'package:flutter/widgets.dart';
+import 'package:shop_app/admin/screens/add_product/add_product.dart';
+import 'package:shop_app/admin/screens/all_product/admin_all_product.dart';
+import 'package:shop_app/admin/screens/all_user/all_user.dart';
+import 'package:shop_app/admin/screens/detail_product/detail_product.dart';
+import 'package:shop_app/admin/screens/detail_purchase/detail_purchase.dart';
+import 'package:shop_app/admin/screens/home/admin_home.dart';
+import 'package:shop_app/admin/screens/purchases/purchases.dart';
+import 'package:shop_app/admin/screens/statistic/statistic.dart';
 import 'package:shop_app/screens/all_products/all_products.dart';
 import 'package:shop_app/screens/cart/cart_screen.dart';
 import 'package:shop_app/screens/check_out/check_out.dart';
@@ -42,4 +50,12 @@ final Map<String, WidgetBuilder> routes = {
   CheckOut.routeName:(context)=>CheckOut(),
   HistoryScreen.routeName:(context)=>HistoryScreen(),
   HistoryDetail.routeName:(context)=>HistoryDetail(),
+  AdminHome.routeName:(context)=>AdminHome(),
+  AdminAllProduct.routeName:(context)=>AdminAllProduct(),
+  DetailProduct.routeName:(context)=>DetailProduct(),
+  Purchases.routeName:(context)=>Purchases(),
+  AllUser.routeName:(context)=>AllUser(),
+  DetailPurchase.routeName:(context)=>DetailPurchase(),
+  Statistic.routeName:(context)=>Statistic(),
+  AddProduct.routeName:(context)=>AddProduct()
 };

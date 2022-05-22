@@ -32,6 +32,7 @@ class SignInProvider with ChangeNotifier {
           await _store.collection('Profiles').doc(credential.user!.uid).get();
       if (saveData == true)
         AppInstance().saveProfile(ProfileData.fromJson(profile.data()!));
+      if(profile.data()!['isAdmin']!=null && profile.data()!['isAdmin']==true) return 'ToAdmin';
       return 'Success';
     } on FirebaseAuthException catch (e) {
       hideLoading();

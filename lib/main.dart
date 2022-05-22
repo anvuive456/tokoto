@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shop_app/admin/screens/all_product/provider/admin_provider.dart';
 import 'package:shop_app/core/app_instance.dart';
 import 'package:shop_app/routes.dart';
 import 'package:shop_app/screens/all_products/provider/all_product_provider.dart';
@@ -69,12 +70,18 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<CartProvider>(
           create: (context) => CartProvider(),
           lazy: false,
-        ),ChangeNotifierProvider<CheckOutProvider>(
+        ),
+        ChangeNotifierProvider<CheckOutProvider>(
           create: (context) => CheckOutProvider(),
           lazy: false,
         )
-        ,ChangeNotifierProvider<HistoryProvider>(
+        ,
+        ChangeNotifierProvider<HistoryProvider>(
           create: (context) => HistoryProvider(),
+          lazy: false,
+        ),
+        ChangeNotifierProvider<AdminProvider>(
+          create: (context) => AdminProvider(),
           lazy: false,
         ),
       ],

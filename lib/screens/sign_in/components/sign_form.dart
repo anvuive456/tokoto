@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shop_app/admin/screens/home/admin_home.dart';
 import 'package:shop_app/components/custom_surfix_icon.dart';
 import 'package:shop_app/components/form_error.dart';
 import 'package:shop_app/helper/keyboard.dart';
@@ -85,6 +86,8 @@ class _SignFormState extends State<SignForm> {
                     email: email!,
                     password: password!,
                     saveData: remember ?? false);
+                if(_message == 'ToAdmin') Navigator.pushNamed(context, AdminHome.routeName);
+                else
                 if (_message == 'Success')
                   Navigator.pushNamed(context, LoginSuccessScreen.routeName);
                 else

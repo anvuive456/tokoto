@@ -5,7 +5,7 @@ import 'package:shop_app/constants.dart';
 import '../../../size_config.dart';
 
 class DetailProductAppBar extends StatelessWidget {
-  final double rating;
+  final num rating;
 
   DetailProductAppBar({required this.rating});
 

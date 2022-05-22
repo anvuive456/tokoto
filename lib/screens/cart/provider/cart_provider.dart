@@ -19,12 +19,7 @@ class CartProvider extends ChangeNotifier {
         .map((event) {
       return event.docs.map((e) {
         var data = e.data();
-        print(data['product']);
-        Map<String, dynamic> map = jsonDecode(data['product']);
-        print(map);
-
-        var _product = Product.fromJson(map);
-
+        var _product = Product.fromJson(data['product'] as Map<String,dynamic>);
         return Cart(product: _product, numOfItem: data['itemNum']);
       }).toList();
     });
@@ -41,7 +36,7 @@ class CartProvider extends ChangeNotifier {
       event.docs.forEach((element) {
         var data = element.data();
         int itemNum = data['itemNum'];
-        var product = Product.fromJson(jsonDecode(data['product']));
+        var product = Product.fromJson(data['product']);
         total = total + (itemNum * product.price);
       });
       return double.parse(total.toStringAsFixed(1));
@@ -54,7 +49,10 @@ class CartProvider extends ChangeNotifier {
         .doc(_auth.currentUser!.uid)
         .collection('MyCart')
         .doc(cart.product.id)
-        .set({'product': jsonEncode(cart.product), 'itemNum': cart.numOfItem});
+        .set({'product': cart.product.toJson(), 'itemNum': cart.numOfItem});
+
+    //this is for prevent virtual doc
+    await _store.collection('Carts').doc(_auth.currentUser!.uid).set({});
   }
 
   Future<void> removeCart({required Cart cart}) async {

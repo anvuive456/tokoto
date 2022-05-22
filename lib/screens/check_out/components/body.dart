@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:shop_app/screens/check_out/provider/check_out_provider.dart';
@@ -34,12 +35,18 @@ class _BodyState extends State<Body> {
               child: Column(
             children: [
               TextFormField(
+                // decoration: InputDecoration(
+                //   prefixIcon: SvgPicture.asset('assets/Phone.svg')
+                // ),
                 controller: _provider.phone,
               ),
               SizedBox(
                 height: 20,
               ),
               TextFormField(
+                // decoration: InputDecoration(
+                //     prefixIcon: SvgPicture.asset('assets/Location point.svg')
+                // ),
                 controller: _provider.address,
               ),
             ],

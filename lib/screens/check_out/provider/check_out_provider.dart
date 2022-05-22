@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:nanoid/nanoid.dart';
 import 'package:shop_app/models/Cart.dart';
 
 class CheckOutProvider extends ChangeNotifier {
@@ -27,17 +28,24 @@ class CheckOutProvider extends ChangeNotifier {
   }
 
   Future<void> pay({required List<Cart> carts}) async {
-    await _store
+    var id = customAlphabet('1234567890abcdefghilkmnop', 10);
+    var doc = await _store
         .collection('History')
         .doc(_auth.currentUser!.uid)
         .collection('MyHistory')
-        .add({
+        .doc(id).set({
+      'id':id,
       'receiveDate': receiveTime,
       'purchasedDate': DateTime.now(),
       'phoneNumber': phone.value.text,
       'address': address.value.text,
+      'status': false,
       'carts': carts.map((e) => e.toJson()).toList()
     });
+
+
+    //this is for prevent virtual doc
+    await _store.collection('History').doc(_auth.currentUser!.uid).set({});
 
     final batch = _store.batch();
     var snapshot = await _store

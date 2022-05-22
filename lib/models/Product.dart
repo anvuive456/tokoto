@@ -4,8 +4,9 @@ class Product {
   String id = '1';
   String title = '', description = '', readMore = '';
   String image = '';
-  double rating = 0.0, price = 0.0;
+  num rating = 0.0, price = 0.0;
   bool isFavourite = false, isPopular = false;
+  String category='';
 
   Product(
       {required this.id,
@@ -16,6 +17,7 @@ class Product {
       required this.title,
       required this.price,
       required this.description,
+        this.category='',
       required this.readMore});
 
   Map<String, dynamic> toJson() {
@@ -28,6 +30,8 @@ class Product {
       'rating': rating,
       'price': price,
       'isFavourite': isFavourite,
+      'category':category,
+      'isPopular':isPopular,
     };
   }
 
@@ -39,6 +43,8 @@ class Product {
     this.image = obj['image'];
     this.rating = obj['rating'];
     this.price = obj['price'];
-    this.isFavourite = obj['isFavourite'];
+    this.isFavourite = obj['isFavourite']??false;
+    this.category = obj['category']??'';
+    this.isPopular = obj['isPopular']??false;
   }
 }
