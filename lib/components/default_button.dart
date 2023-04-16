@@ -10,7 +10,7 @@ class DefaultButton extends StatelessWidget {
     this.press,
   }) : super(key: key);
   final String? text;
-  final Function? press;
+  final VoidCallback? press;
 
   @override
   Widget build(BuildContext context) {
@@ -19,12 +19,13 @@ class DefaultButton extends StatelessWidget {
       height: getProportionateScreenHeight(56),
       child: TextButton(
         style: TextButton.styleFrom(
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          primary: Colors.white,
+          foregroundColor: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
           backgroundColor: kPrimaryColor,
         ),
-        onPressed: press as void Function()?,
+        onPressed: press,
         child: Text(
           text!,
           style: TextStyle(

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shop_app/components/coustom_bottom_nav_bar.dart';
 import 'package:shop_app/components/loading_widget.dart';
 import 'package:shop_app/components/no_data_widget.dart';
-import 'package:shop_app/enums.dart';
 import 'package:shop_app/models/history.dart';
 import 'package:shop_app/screens/history/components/history_card.dart';
 import 'package:shop_app/screens/history/provider/history_provider.dart';

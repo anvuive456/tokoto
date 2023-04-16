@@ -1,4 +1,3 @@
-import 'package:firestore_search/firestore_search.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shop_app/components/loading_widget.dart';
@@ -15,25 +14,8 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var _provider = Provider.of<FavouriteProvider>(context);
-    Widget _buildlist() {
-      return StreamBuilder<List<Product>>(
-          stream: _provider.getFavouriteProducts(),
-          builder:(context,snapshot){
-            if (snapshot.connectionState == ConnectionState.waiting)
-              return LoadingWidget();
-            if (snapshot.hasError)
-              return Center(child: ErrorWidget(snapshot.error!)); else
-            if (!snapshot.hasData ||snapshot.data!.isEmpty) return NoDataWidget();
-            var list = snapshot.data!;
-            print(list[0].isFavourite);
-            return Wrap(
-              spacing: getProportionateScreenWidth(20),
-              runSpacing: getProportionateScreenWidth(20),
-              children: list.map((e) => ProductCard(product: e)).toList(),
-            );
-          });
-    }
+    var provider = Provider.of<FavouriteProvider>(context);
+
     return SafeArea(
       child: SingleChildScrollView(
         child: Column(
@@ -42,16 +24,38 @@ class Body extends StatelessWidget {
             FavouriteHeader(),
             SizedBox(height: getProportionateScreenWidth(10)),
             Padding(
-              padding:
-              EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
-              child: SectionTitle(title: "Favourites", ),
+              padding: EdgeInsets.symmetric(
+                  horizontal: getProportionateScreenWidth(20)),
+              child: SectionTitle(
+                title: "Favourites",
+              ),
             ),
             SizedBox(height: getProportionateScreenHeight(20)),
-            _buildlist(),
+            _buildlist(provider),
             SizedBox(height: getProportionateScreenWidth(30)),
           ],
         ),
       ),
     );
+  }
+
+  Widget _buildlist(FavouriteProvider provider) {
+    return StreamBuilder<List<Product>>(
+        stream: provider.getFavouriteProducts(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting)
+            return LoadingWidget();
+          if (snapshot.hasError)
+            return Center(child: ErrorWidget(snapshot.error!));
+          else if (!snapshot.hasData || snapshot.data!.isEmpty)
+            return NoDataWidget();
+          var list = snapshot.data!;
+          print(list[0].isFavourite);
+          return Wrap(
+            spacing: getProportionateScreenWidth(20),
+            runSpacing: getProportionateScreenWidth(20),
+            children: list.map((e) => ProductCard(product: e)).toList(),
+          );
+        });
   }
 }

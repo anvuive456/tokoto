@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shop_app/constants.dart';
 import 'package:shop_app/screens/profile/provider/profile_provider.dart';
-import 'package:shop_app/screens/sign_in/provider/sign_in_provider.dart';
 import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
 import 'components/body.dart';
 

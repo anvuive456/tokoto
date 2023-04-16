@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:shop_app/admin/screens/all_product/admin_all_product.dart';
 import 'package:shop_app/admin/screens/all_user/all_user.dart';
 import 'package:shop_app/admin/screens/purchases/purchases.dart';
-import 'package:shop_app/admin/screens/statistic/statistic.dart';
 import 'package:shop_app/constants.dart';
 import './menu_item.dart';
 

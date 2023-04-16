@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:shop_app/screens/sign_in/provider/sign_in_provider.dart';
 
 import 'components/body.dart';
 

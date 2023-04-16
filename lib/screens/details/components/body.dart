@@ -7,7 +7,6 @@ import 'package:shop_app/screens/cart/provider/cart_provider.dart';
 import 'package:shop_app/size_config.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-import 'color_dots.dart';
 import 'product_description.dart';
 import 'top_rounded_container.dart';
 import 'product_images.dart';

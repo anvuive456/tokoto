@@ -1,4 +1,5 @@
-import 'package:firebase_auth/firebase_auth.dart';
+import 'dart:async';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -13,19 +14,23 @@ import 'package:shop_app/screens/edit_profile/provider/edit_profile_provider.dar
 import 'package:shop_app/screens/favourite/provider/favourite_provider.dart';
 import 'package:shop_app/screens/history/provider/history_provider.dart';
 import 'package:shop_app/screens/home/home_screen.dart';
-import 'package:shop_app/screens/profile/profile_screen.dart';
 import 'package:shop_app/screens/profile/provider/profile_provider.dart';
 import 'package:shop_app/screens/sign_in/provider/sign_in_provider.dart';
 import 'package:shop_app/screens/splash/splash_screen.dart';
 import 'package:shop_app/theme.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  runZonedGuarded(() async {
+    WidgetsFlutterBinding.ensureInitialized();
 
-  await Firebase.initializeApp();
+    await Firebase.initializeApp();
 
-  AppInstance().initData();
-  runApp(MyApp());
+    AppInstance().initData();
+    runApp(MyApp());
+  }, (error, stack) {
+    print(error);
+    print(stack);
+  });
 }
 
 class MyApp extends StatelessWidget {
@@ -50,7 +55,6 @@ class MyApp extends StatelessWidget {
           create: (context) => ProfileProvider(),
           lazy: false,
         ),
-
         ChangeNotifierProvider<AllProductProvider>(
           create: (context) => AllProductProvider(),
           lazy: false,
@@ -74,8 +78,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<CheckOutProvider>(
           create: (context) => CheckOutProvider(),
           lazy: false,
-        )
-        ,
+        ),
         ChangeNotifierProvider<HistoryProvider>(
           create: (context) => HistoryProvider(),
           lazy: false,

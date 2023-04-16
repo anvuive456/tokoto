@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:shop_app/models/Cart.dart';
 import 'package:shop_app/screens/cart/provider/cart_provider.dart';
@@ -57,7 +56,7 @@ class CartCard extends StatelessWidget {
                         style: Theme
                             .of(context)
                             .textTheme
-                            .bodyText1),
+                            .bodyLarge),
                   ],
                 ),
               )

@@ -7,7 +7,6 @@ import 'package:shop_app/models/Product.dart';
 import 'package:shop_app/screens/details/details_screen.dart';
 import 'package:shop_app/screens/details/provider/detail_product_provider.dart';
 import 'package:shop_app/size_config.dart';
-import 'components/body.dart';
 
 class Search extends StatelessWidget {
   static String routeName = 'search';

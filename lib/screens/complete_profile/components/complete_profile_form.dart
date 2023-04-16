@@ -4,8 +4,6 @@ import 'package:shop_app/components/custom_surfix_icon.dart';
 import 'package:shop_app/components/default_button.dart';
 import 'package:shop_app/components/form_error.dart';
 import 'package:shop_app/screens/home/home_screen.dart';
-import 'package:shop_app/screens/otp/otp_screen.dart';
-import 'package:shop_app/screens/profile/provider/profile_provider.dart';
 import 'package:shop_app/screens/sign_in/provider/sign_in_provider.dart';
 
 import '../../../constants.dart';

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shop_app/components/loading_widget.dart';
 import 'package:shop_app/components/no_account_text.dart';
-import 'package:shop_app/components/socal_card.dart';
 import 'package:shop_app/screens/sign_in/provider/sign_in_provider.dart';
 import '../../../size_config.dart';
 import 'sign_form.dart';

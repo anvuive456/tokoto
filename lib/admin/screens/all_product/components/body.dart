@@ -6,7 +6,6 @@ import 'package:shop_app/components/loading_widget.dart';
 import 'package:shop_app/components/no_data_widget.dart';
 import 'package:shop_app/constants.dart';
 import 'package:shop_app/models/Product.dart';
-import 'package:shop_app/screens/all_products/provider/all_product_provider.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
