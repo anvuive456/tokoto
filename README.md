@@ -37,8 +37,6 @@ In the first part of our complete e-commerce app, we show you how you can create
 
 => Bottom Navigation Bar (added)
 
-Now it contains all the screen, thanks for your love and support 🙏 
-
 ## Photos
 ![Preview](/1.png)
 ![Preview](2.png)
