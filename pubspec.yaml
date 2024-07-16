@@ -38,7 +38,7 @@ dependencies:
   firestore_search:
     path: packages/firestore_search
   url_launcher: ^6.3.0
-  flutter_datetime_picker: ^1.5.1
+  flutter_datetime_picker_plus: ^2.2.0
   intl: ^0.19.0
   uuid: ^4.4.0
   nanoid: ^1.0.0

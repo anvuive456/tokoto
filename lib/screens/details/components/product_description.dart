@@ -8,13 +8,13 @@ import '../../../constants.dart';
 import '../../../size_config.dart';
 
 class ProductDescription extends StatefulWidget {
-   ProductDescription({
+  const ProductDescription({
     Key? key,
     required this.product,
     required this.pressOnSeeMore,
   }) : super(key: key);
 
-   Product product;
+  final Product product;
   final VoidCallback pressOnSeeMore;
 
   @override
@@ -42,21 +42,22 @@ class _ProductDescriptionState extends State<ProductDescription> {
             padding: EdgeInsets.all(getProportionateScreenWidth(15)),
             width: getProportionateScreenWidth(64),
             decoration: BoxDecoration(
-              color:
-                  widget.product.isFavourite ? Color(0xFFFFE6E6) : Color(0xFFF5F6F9),
+              color: widget.product.isFavourite
+                  ? Color(0xFFFFE6E6)
+                  : Color(0xFFF5F6F9),
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20),
                 bottomLeft: Radius.circular(20),
               ),
             ),
             child: GestureDetector(
-              onTap: (){
-                if(widget.product.isFavourite){
+              onTap: () {
+                if (widget.product.isFavourite) {
                   _provider.unLikeProduct(widget.product.id);
                   setState(() {
                     widget.product.isFavourite = false;
                   });
-                } else{
+                } else {
                   _provider.likeProduct(widget.product.id);
                   setState(() {
                     widget.product.isFavourite = true;
@@ -65,8 +66,9 @@ class _ProductDescriptionState extends State<ProductDescription> {
               },
               child: SvgPicture.asset(
                 "assets/icons/Heart Icon_2.svg",
-                color:
-                    widget.product.isFavourite ? Color(0xFFFF4848) : Color(0xFFDBDEE4),
+                color: widget.product.isFavourite
+                    ? Color(0xFFFF4848)
+                    : Color(0xFFDBDEE4),
                 height: getProportionateScreenWidth(16),
               ),
             ),
