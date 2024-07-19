@@ -1,0 +1,100 @@
+{
+  "project_info": {
+    "project_number": "853866447195",
+    "project_id": "tokoto-ae502",
+    "storage_bucket": "tokoto-ae502.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853866447195:android:8de4876d31ef0e8031da7e",
+        "android_client_info": {
+          "package_name": "com.example.shop_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "853866447195-0g4mp2fm7tufcob4dsg1dlurok9bmjdu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shop_app",
+            "certificate_hash": "e72b50e67fde5a5793454114008e62d01a660a5c"
+          }
+        },
+        {
+          "client_id": "853866447195-5pe9c1ifuksl9lcoqhs18ck5plonojvg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shop_app",
+            "certificate_hash": "b31336d539e6fb3152b846371487e1874a3f4ab0"
+          }
+        },
+        {
+          "client_id": "853866447195-cliftttdl6i31u5uhkacmvrk0amqipa8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shop_app",
+            "certificate_hash": "fe72742f512544b913a4b43bc13a89ff62c369f6"
+          }
+        },
+        {
+          "client_id": "853866447195-i0hoomaon9vph02p5lpeu61nahnbm155.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlFMk8apHmtzg-Od3r438EIFNVXbWKD2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "853866447195-i0hoomaon9vph02p5lpeu61nahnbm155.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853866447195:android:53efe93d3a98bb3931da7e",
+        "android_client_info": {
+          "package_name": "com.example.shop_app.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "853866447195-gr4g6ukd0gd8u5el78fdo08nmulb0a0n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shop_app.dev",
+            "certificate_hash": "2af100639b66d717f2806d2ca01c4096e8ca94cb"
+          }
+        },
+        {
+          "client_id": "853866447195-i0hoomaon9vph02p5lpeu61nahnbm155.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlFMk8apHmtzg-Od3r438EIFNVXbWKD2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "853866447195-i0hoomaon9vph02p5lpeu61nahnbm155.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
